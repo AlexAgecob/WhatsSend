@@ -1,0 +1,233 @@
+/* GLOBAL */
+*{
+    border:0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+}
+
+/* BODY */
+body{
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*.container{  
+}*/
+
+/* SECTION BACKGROUND */
+header .background{
+    z-index: 0;
+    width: 100%;
+    background: linear-gradient(
+230deg, #018c7e,#04675d, #009688, #046a60);
+    background-size: 1400% 1400%
+}
+
+.background .top{
+    padding: 0px 0px 0px calc(40px - 0%);
+    height: 230px;
+}
+
+.top .name{
+    display: flex;
+    padding: 30px 0px 0px 10px;
+}
+
+.name figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* TITULO DO NOME DO WHATSAPP */
+.name h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    font-size: 15pt;
+    font-weight: bold;
+    line-height: normal;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.botton{
+    width: 100%;
+    height: 80%;
+    background-color: black;
+}
+
+/* SECTION LOGIN */
+section .area-login{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    margin-top: 100px;
+    padding: 0px 0px 0px 0px;
+    top: 5px;
+}
+
+.area-login .container{
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 17px 50px 0 rgb(11 20 26 / 19%), 0 12px 15px 0 rgb(11 20 26 / 24%);
+
+    z-index: 2;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    max-width: 1050px;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    height: 700px;
+    border-radius: 5px;
+    box-shadow: 0 17px 50px 0 rgb(0 0 0 / 19%), 0 12px 15px 0 rgb(0 0 0 / 24%);
+    background-color: #fff; */
+}
+
+.container .main {
+    padding: 64px 60px 110px;
+    position: relative;
+}
+
+.container .main-box {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+.container .main .main-box .left{
+    flex: none;
+    max-width: 556px;
+
+    /* display: flex;
+    width: 60%;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row; */
+}
+
+
+
+.left .left-1 {
+    flex: none;
+    max-width: 556px;
+}
+
+.left .left-1 .title{
+    font-size: 28px;
+    font-weight: 300;
+    line-height: normal;
+    color: #41525d;
+    margin-bottom: 52px;
+}
+
+.left .left-1 ol{
+    padding: 0 0 0 24px;
+    margin: 0;
+    list-style-type: decimal !important;
+}
+
+.left .left-1 ol li{
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--gray-700);
+    margin-top: 18px;
+}
+
+.left .left-1 ol li strong{
+    display: inline-block;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.left .left-1 ol li span {
+    visibility: visible;
+}
+
+.area-login .container .main .right{
+    width: 40%;
+    padding: 50px 0px 50px 0px;
+}
+
+
+
+.container .main .right{
+    margin-left: 60px;
+    position: relative;
+}
+
+.right .qrcode{
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 264px;
+    overflow: hidden;
+}
+
+.right .qrcode .qrcode-image{
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    opacity: 1;
+    transition: opacity .5s cubic-bezier(.1,.82,.25,1);
+
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+
+
+
+/* ESCONDE OS ITEM COM ESSA CLASSE */
+.hide {
+    display: none !important;
+    transition: opacity 1s ease-in-out;
+}
+.show {
+    display: visible;
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+
+

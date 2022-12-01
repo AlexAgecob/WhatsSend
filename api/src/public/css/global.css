@@ -1,0 +1,258 @@
+
+#floatingTextarea1 {
+    height: 350px;
+    width: 400px;
+}
+
+#floatingTextarea2 {
+    height: 200px;
+    width: 300px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-family: "Merriweather", serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+html::-webkit-scrollbar {
+    /* display: none; */
+}
+
+body {
+    /* background: #e7e7e7; */
+    /* padding: 5px; */
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+body,
+input,
+textarea,
+select,
+button {
+    font: 400 1rem "Roboto", sans-serif;
+    font: 400 1rem "Merriweather", serif;
+    font: 400 1rem "Poppins", sans-serif;
+    font: 400 1rem "Roboto Condensed", sans-serif;
+}
+
+.container {
+    margin-top: 1.5rem;
+}
+
+.title-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Div Decoration */
+/* Phone */
+.div-box-header {
+    position: relative;
+    padding: 10px 15px 0px 15px;
+    margin: 0 -15px 15px;
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05);
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+}
+
+.div-box {
+    --bd-example-padding: 1rem;
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    margin: 0 -1.5rem;
+    border-width: 1px 0;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    /* background-color: #f5f5f5; */
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+}
+
+.div-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .div-box-header {
+        margin-right: 0;
+        margin-left: 0;
+        /* background-color: #fff; */
+        /* border-color: #ddd; */
+        border-width: 1px;
+        box-shadow: none;
+    }
+
+    .div-box {
+        /* position: relative; */
+        padding: 10px 15px 10px 15px;
+        --bd-example-padding: 1.5rem;
+        margin-right: 0;
+        margin-left: 0;
+        border-width: 1px;
+        border-radius: 0px 0px 4px 4px;
+    }
+}
+
+/* Botoes*/
+button {
+    border: none;
+    background-color: #e7e7e7;
+}
+
+.div-button-width {
+    width: 5rem;
+}
+
+.div-separe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dt-button {
+    border-radius: 5px !important;
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+/* Quebra de linha */
+p {
+    border-top: 1px solid #a0a6af;
+    margin-bottom: 0rem;
+    padding: 5px 0px 0px 0px;
+}
+
+/* Campos de data */
+.input-date {
+    border-radius: 5px;
+    border: 2px solid #6c757d;
+    height: 100%;
+}
+
+.ph-xxs {
+    font-size: 0.5em;
+}
+
+.ph-xs {
+    font-size: 0.75em;
+}
+
+.ph-sm {
+    font-size: 0.875em;
+}
+
+.ph-lg {
+    font-size: 1.3333em;
+    line-height: 0.75em;
+    vertical-align: -0.0667em;
+}
+
+.ph-xl {
+    font-size: 1.5em;
+    line-height: 0.6666em;
+    vertical-align: -0.075em;
+}
+
+.ph-1x {
+    font-size: 1em;
+}
+
+.ph-2x {
+    font-size: 2em;
+}
+
+.ph-3x {
+    font-size: 3em;
+}
+
+.ph-4x {
+    font-size: 4em;
+}
+
+.ph-5x {
+    font-size: 5em;
+}
+
+.ph-6x {
+    font-size: 6em;
+}
+
+.ph-7x {
+    font-size: 7em;
+}
+
+.ph-8x {
+    font-size: 8em;
+}
+
+.ph-9x {
+    font-size: 9em;
+}
+
+.ph-10x {
+    font-size: 10em;
+}
+
+.ph-fw {
+    text-align: center;
+    width: 1.25em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: #383a3c;
+    margin-top: 15px;
+}
+
+/* Style modal load */
+.modal-load {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-load img {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* enquanto estiver carregando, o scroll da página estará desativado */
+body.loading {
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* a partir do momento em que o body estiver com a classe loading,  o modal aparecerá */
+body.loading .modal-load {
+    display: block;
+}
+
+/*# sourceMappingURL=global.css.map */
