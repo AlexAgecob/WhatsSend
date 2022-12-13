@@ -4,7 +4,6 @@ app.disableHardwareAcceleration()
 
 const express = require('./api/dist/server.js');
 
-
 function createWindow() {
 
     let win = new BrowserWindow(
@@ -16,8 +15,6 @@ function createWindow() {
     win.loadURL('http://localhost:3333/')
     
     win.focus();
-
-    
 }
 
 app.whenReady().then(createWindow)

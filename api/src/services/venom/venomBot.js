@@ -3,7 +3,6 @@ import path from 'path'
 import fs from 'fs';
 
 import { excludeFile } from '../../utils/excludeFile.js';
-import { verificaNumero } from '../../utils/verificaNumero.js';
 // import { verfifyNumber } from '../../utils/verifyNumbers.js';
 
 // const connect = 'alou';

@@ -1,7 +1,6 @@
 import { venomBot } from '../services/venom/venomBot.js';
 
 import { delay } from '../utils/delay.js'
-import { verificaNumero } from '../utils/verificaNumero.js';
 
 const venom = new venomBot();
 

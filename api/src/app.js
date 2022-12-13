@@ -15,10 +15,6 @@ app.use(express.json());
 
 app.use(router);
 
-// import { venomBot } from './services/venom/venomBot.js';
-// const venom = new venomBot();
-
-
 app.use(express.static(`${process.env.NODE_ENV === "dev" ? "./src/public" : "./api/dist/public"}`));
 
 export { app }
