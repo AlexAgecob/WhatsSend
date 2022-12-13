@@ -1,4 +1,4 @@
-const timer = (seconds) => {
+const delay = (seconds) => {
     let time = seconds * 1000
     return new Promise(res => setTimeout(res, time))
 }
@@ -6,11 +6,9 @@ const timer = (seconds) => {
 const doSomething = async () => {
     for (var i = 0; i < 5; i++) {
         // console.log("Looping... " + i);
-        await timer(1);
+        await delay(1);
     }
 }
 
 
-module.exports = {
-    doSomething
-}
+export { delay };

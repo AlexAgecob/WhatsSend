@@ -1,27 +1,27 @@
-$('#number9Add').change(()=> {
+$('#number9Add').change(() => {
     $('#number9Remove').prop('checked', false)
 })
-$('#number9Remove').change(()=> {
+$('#number9Remove').change(() => {
     $('#number9Add').prop('checked', false)
 })
 
 // ATUALIZA LINKS
-$('#update-numbers').click(()=> {
+$('#update-numbers').click(() => {
     let number9Add = $('#number9Add').prop('checked');
     let number9Remove = $('#number9Remove').prop('checked');
 
-    const cheks9 ={
-        add :number9Add,
-        remove : number9Remove,
+    const cheks9 = {
+        add: number9Add,
+        remove: number9Remove,
     };
 
     updateNumbersInTextBox(cheks9);
 });
 
 // FUNÇÃO ATUALIZA NUMEROS
-const updateNumbersInTextBox = (cheks9) =>{
+const updateNumbersInTextBox = (cheks9) => {
     // DADOS INPUT
-    let numbersRow = $('#floatingTextarea1').val().replace(/^\s+|\s+$/g,"");
+    let numbersRow = $('#floatingTextarea1').val().replace(/^\s+|\s+$/g, "");
 
     let result = numbersRow.split("\n");
 
@@ -35,62 +35,66 @@ const updateNumbersInTextBox = (cheks9) =>{
     let boxValueDddNov = '';
     let boxWhatsappNov = '';
 
-    // ARRAYS
+    // // ARRAYS
     let dddLineArray = [];
     let numberLineArray = [];
 
-    if (cheksAdd9 === true ){
-        for(let i=0; i<result.length; i++){
+    if (cheksAdd9 === true) {
+        for (let i = 0; i < result.length; i++) {
             let linha = result[i]
 
-            let dddLine = linha.slice(2,4);
-            let numberLine = linha.slice(4,13);
-            
+            let data = linha.split(",")
+   
+            let dddLine = data[0].slice(2, 4);
+            let numberLine = data[0].slice(4, 13);
+
             dddLineArray.push(dddLine);
             numberLineArray.push(numberLine);
 
-            if(numberLineArray[i].length === 8){
-                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}9${numberLineArray[i]}\n`
+            if (numberLineArray[i].length === 8) {
+                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}9${numberLineArray[i]},${data[1]},${data[2]}\n`
             }
-            else{
-                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${numberLineArray[i]}\n`
+            else {
+                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${numberLineArray[i]},${data[1]},${data[2]}\n`
             }
         }
-    }else if(cheksRemove9 === true){
-        for(let i=0; i<result.length; i++){
+    } else if (cheksRemove9 === true) {
+        for (let i = 0; i < result.length; i++) {
             let linha = result[i]
 
+            let data = linha.split(",")
+
             let linhaReplace
-    
-            let dddLine = linha.slice(2,4);
-            let numberLine = linha.slice(4,13)
+
+            let dddLine = data[0].slice(2, 4);
+            let numberLine = data[0].slice(4, 13)
 
             dddLineArray.push(dddLine);
             numberLineArray.push(numberLine);
 
-            if(numberLineArray[i].length === 9){
+            if (numberLineArray[i].length === 9) {
 
                 linhaReplace = numberLineArray[i].replace(/^./, "");
 
-                // console.log(linhaReplace)
-
-                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${linhaReplace}\n`
-            }else{
-                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${numberLineArray[i]}\n`
+                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${linhaReplace},${data[1]},${data[2]}\n`
+            } else {
+                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${numberLineArray[i]},${data[1]},${data[2]}\n`
             }
         }
-    }else if(cheksRemove9 === false && cheksAdd9 === false){
-            for(let i=0; i<result.length; i++){
-                let linha = result[i]
-    
-                let dddLine = linha.slice(2,4);
-                let numberLine = linha.slice(4,13)
+    } else if (cheksRemove9 === false && cheksAdd9 === false) {
+        for (let i = 0; i < result.length; i++) {
+            let linha = result[i]
 
-                dddLineArray.push(dddLine);
-                numberLineArray.push(numberLine);
+            let data = linha.split(",")
 
-                boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${numberLineArray[i]}\n`
-            }
+            let dddLine = data[0].slice(2, 4);
+            let numberLine = data[0].slice(4, 13)
+
+            dddLineArray.push(dddLine);
+            numberLineArray.push(numberLine);
+
+            boxValueDddResultNov = boxValueDddNov += `55${dddLineArray[i]}${numberLineArray[i]},${data[1]},${data[2]}\n`
+        }
     }
     $('#floatingTextarea1').val(boxValueDddResultNov)
 }

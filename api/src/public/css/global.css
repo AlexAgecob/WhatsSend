@@ -1,12 +1,16 @@
 
 #floatingTextarea1 {
-    height: 350px;
-    width: 400px;
+    height: 380px;
+    /* width: 400px; */
 }
 
 #floatingTextarea2 {
     height: 200px;
-    width: 300px;
+    /* width: 300px; */
+}
+
+#floatingTextarea-results{
+    height: 380px;
 }
 
 * {
@@ -55,10 +59,23 @@ button {
     margin-top: 1.5rem;
 }
 
+.divider {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgb(34 34 34);
+
+}
+
 .title-control {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
 }
 
 /* Div Decoration */
@@ -226,33 +243,15 @@ footer {
     margin-top: 15px;
 }
 
-/* Style modal load */
-.modal-load {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    height: 100%;
-}
 
-.modal-load img {
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
-/* enquanto estiver carregando, o scroll da página estará desativado */
-body.loading {
-    overflow: hidden;
-    pointer-events: none;
-}
 
-/* a partir do momento em que o body estiver com a classe loading,  o modal aparecerá */
-body.loading .modal-load {
-    display: block;
-}
 
-/*# sourceMappingURL=global.css.map */
+.hide {
+    display: none !important;
+    transition: opacity 1s ease-in-out;
+}
+.show {
+    display: visible;
+    transition: opacity 1s ease-in-out;
+}

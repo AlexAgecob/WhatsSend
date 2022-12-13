@@ -2,7 +2,7 @@ const {app, BrowserWindow} = require('electron')
 
 app.disableHardwareAcceleration()
 
-const express = require('./api/src/server.js');
+const express = require('./api/dist/server.js');
 
 
 function createWindow() {

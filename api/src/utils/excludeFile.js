@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const excludeFile = async (folder) => {
     const verifyFolder = fs.existsSync(folder);
@@ -8,6 +8,4 @@ const excludeFile = async (folder) => {
     }
 }
 
-module.exports = {
-    excludeFile
-} 
+export { excludeFile }

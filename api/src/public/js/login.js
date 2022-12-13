@@ -64,7 +64,7 @@ async function getQrcode() {
 
     while (!qrcodeIsValid) {
         try {
-            await api.get('/qrcode')
+            await api.get('app/qrcode')
                 .then(res => {
                     if (res.status == 200) {
                         // console.log(res.data.Image)
@@ -90,13 +90,13 @@ async function getQrcode() {
         await doSomething()
 
         try {
-            await api.get('/venom/logged')
+            await api.get('/wpp/logged')
                 .then(res => {
                     if (res.data.Login == 'Authenticate') {
                         qrcodeIsValid = true;
                         console.log(res.data.Login)
                         
-                        window.location.href = 'http://localhost:3333/whats/send';
+                        window.location.href = 'http://localhost:3333/app/whats/send';
 
                     } else {
                         console.log(res);
@@ -107,7 +107,7 @@ async function getQrcode() {
                     console.log(err);
                 });
         } catch (err) {
-            console.log('Erro: venom/logged')
+            console.log('Erro: wpp/logged')
         }
 
 

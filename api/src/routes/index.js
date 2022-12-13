@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+import { Router } from "express";
 
-/* GET home page. */
-router.get('/test', function(request, response) {
-    return response.status(200).json({ Correto: "Deu certo" });
-});
+import { appRoutes } from "./app.routes.js";
+import { wppRoutes } from "./wpp.routes.js";
 
-module.exports = router;
+const router = Router();
+
+router.use("/app", appRoutes);
+// router.use("/venom", venomRoutes);
+router.use("/wpp", wppRoutes);
+
+
+
+export { router }

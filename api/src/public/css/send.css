@@ -7,10 +7,46 @@
     border-radius: 5px !important;
 }
 
+.slide-temp {
+    margin-top: 1rem;
+}
 
-
-#floatingTextarea1{
+/* #floatingTextarea1{
     height: 350px; 
     width: 550px;
     margin-right: 1rem;
+} */
+
+
+/* Style modal load */
+.modal-load {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-load img {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* enquanto estiver carregando, o scroll da página estará desativado */
+body.loading {
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* a partir do momento em que o body estiver com a classe loading,  o modal aparecerá */
+body.loading .modal-load {
+    display: block;
+}
+
+.show{
+    display: block !important;
 }
